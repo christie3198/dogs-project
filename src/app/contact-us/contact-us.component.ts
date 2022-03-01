@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-contact-us',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactUsComponent implements OnInit {
 
+  floatingInput: string = '';
+  floatingTextarea: string = '';
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  contactUsSubmit(formValue: NgForm){
+    console.log(formValue.value);
+    //validations
+    //Data Processing
+    //Then call API to save the data
   }
 
 }
