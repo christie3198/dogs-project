@@ -1,0 +1,44 @@
+{
+  "dogs": [
+    {
+      "id": 1,
+      "name": "oscar",
+      "breed": "lab"
+    },
+    {
+      "id": 2,
+      "name": "lucy",
+      "breed": "lab"
+    },
+    {
+      "id": 3,
+      "name": "simmy",
+      "breed": "lab"
+    },
+    {
+      "id": 4,
+      "name": "oscar",
+      "breed": "lab"
+    },
+    {
+      "id": 5,
+      "name": "oscar",
+      "breed": "lab"
+    },
+    {
+      "id": 6,
+      "name": "oscar",
+      "breed": "lab"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

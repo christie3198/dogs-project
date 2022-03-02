@@ -14,6 +14,7 @@ export class ContactUsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
   contactUsSubmit(formValue: NgForm){
