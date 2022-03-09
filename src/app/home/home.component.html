@@ -1,12 +1,18 @@
-<nav class="navbar navbar-expand-lg navbar-dark">
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
   <div class="container-fluid">
-    <a class="navbar-brand" routerLink="../home">Dog For You</a>
+    <a class="navbar-brand" routerLink="../home">
+      <img src="../../assets/dog-logo2.png" alt="Dogs"> 
+      <span>
+        For You
+      </span>
+    </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a class="nav-link" routerLinkActive="active" routerLink="../home">Home</a>
         </li>
@@ -17,35 +23,40 @@
           <a class="nav-link" routerLinkActive="active" routerLink="../dogs-list">Dogs List</a>
         </li>
       </ul>
-      <form class="d-flex">
-        <button class="btn btn-success my-2 my-sm-0" routerLinkActive="active" routerLink="../login">Login</button>
-    </form>
-</div>
-</div>
+      <form class="d-flex" routerLinkActive="active" routerLink="../login">
+        <img src="../../assets/login-avatar.svg" alt="Login">
+        <img src="../../assets/login-icon.svg" alt="Login">
+      </form>
+    </div>
+  </div>
 </nav>
 
-<div class="text-center">
-    <div id="homeCarouselControls" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="../../assets/image1.jpg" class="d-block mx-auto" alt="image1">
-            </div>
-            <div class="carousel-item">
-                <img src="../../assets/image2.jpg" class="d-block mx-auto" alt="image2">
-            </div>
-            <div class="carousel-item">
-                <img src="../../assets/image3.jpg" class="d-block mx-auto" alt="image3">
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#homeCarouselControls" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#homeCarouselControls" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-        
-    </div>
-    <button class="btn btn-primary primary-contact-us" routerLink="../contact-us">Contact Us</button>
+<div class="container-manual">
+
+  <div class="text-center">
+      <div id="homeCarouselControls" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+              <div class="carousel-item active">
+                  <img src="../../assets/image1.jpg" class="d-block mx-auto" alt="image1">
+              </div>
+              <div class="carousel-item">
+                  <img src="../../assets/image2.jpg" class="d-block mx-auto" alt="image2">
+              </div>
+              <div class="carousel-item">
+                  <img src="../../assets/image3.jpg" class="d-block mx-auto" alt="image3">
+              </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#homeCarouselControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#homeCarouselControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+          </button>
+          
+      </div>
+      <button class="btn btn-primary primary-contact-us" routerLink="../contact-us">Contact Us</button>
+  </div>
 </div>
+

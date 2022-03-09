@@ -30,7 +30,6 @@ export class DogsListComponent implements OnInit {
     this.dogsListService.getDogsList().subscribe(getData => {
       this.dogsList = getData;
     });
-    
   }
 
   addNewData(formValue: any){
