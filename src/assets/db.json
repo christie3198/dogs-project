@@ -1,34 +1,14 @@
 {
   "dogs": [
     {
-      "id": 1,
-      "name": "oscar",
-      "breed": "lab"
-    },
-    {
       "id": 2,
-      "name": "lucy",
-      "breed": "lab"
+      "name": "Leo",
+      "breed": "Simmy"
     },
     {
-      "id": 3,
-      "name": "simmy",
-      "breed": "lab"
-    },
-    {
-      "id": 4,
-      "name": "oscar",
-      "breed": "lab"
-    },
-    {
-      "id": 5,
-      "name": "oscar",
-      "breed": "lab"
-    },
-    {
-      "id": 6,
-      "name": "oscar",
-      "breed": "lab"
+      "id": 1,
+      "name": "Oscar",
+      "breed": "Lab"
     }
   ],
   "comments": [

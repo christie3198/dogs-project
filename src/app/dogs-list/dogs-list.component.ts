@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, NgForm } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { DogsListService } from '../classes/dogs-list.service';
 
 @Component({
@@ -10,24 +10,19 @@ import { DogsListService } from '../classes/dogs-list.service';
 export class DogsListComponent implements OnInit {
 
   dogsList: any;
-  formName : FormGroup;
-  updateFormName : FormGroup;
+  dogFormGroup : FormGroup;
   messageTrue = false;
   messageUpdateTrue = false;
+  messageDeleteTrue = false;
 
   constructor(
     public dogsListService: DogsListService,
     private fb: FormBuilder
   ) {
-    this.formName = this.fb.group({
+    this.dogFormGroup = this.fb.group({
       dogId: [""],
       dogName: [""],
       dogBreed: [""]
-    });
-    this.updateFormName = this.fb.group({
-      dogUpdateId: [""],
-      dogUpdateName: [""],
-      dogUpdateBreed: [""]
     });
    }
 
@@ -39,7 +34,7 @@ export class DogsListComponent implements OnInit {
   }
 
   addNewData(formValue: any){
-    const newDogData = {id: this.formName.value.dogId, name: this.formName.value.dogName, breed: this.formName.value.dogBreed };
+    const newDogData = {id: this.dogFormGroup.value.dogId, name: this.dogFormGroup.value.dogName, breed: this.dogFormGroup.value.dogBreed };
     this.dogsListService.createDogDetails(newDogData).subscribe(postData => {
       console.log(postData);
       this.messageTrue = true;
@@ -47,12 +42,19 @@ export class DogsListComponent implements OnInit {
   }
   
   updateExistingData(formUpdateValue: any){
-    const updateDogData = {id: this.updateFormName.value.dogUpdateId, name: "simmy", breed: "lab" };
-    this.dogsListService.updateDogDetail(this.updateFormName.value.dogUpdateId, updateDogData).subscribe(updateData =>{
+    const updateDogData = {id: this.dogFormGroup.value.dogId, name: this.dogFormGroup.value.dogName, breed: this.dogFormGroup.value.dogBreed };
+    this.dogsListService.updateDogDetail(this.dogFormGroup.value.dogId, updateDogData).subscribe(updateData =>{
       console.log(updateData);
       this.messageUpdateTrue = true;
-
+      
     })
   }
 
+  deleteDataExistingData(formValue: any){
+    this.dogsListService.deleteDogDetail(this.dogFormGroup.value.dogId).subscribe(deleteData => {
+      console.log(deleteData);
+      this.messageDeleteTrue = true;
+    });
+  }
+  
 }
