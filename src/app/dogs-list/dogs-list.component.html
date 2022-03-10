@@ -67,9 +67,9 @@
                 </div>
                 
                 <div class="d-flex justify-content-between">
-                    <button class="btn btn-primary ms-3" type="submit" [disabled]="!dogForm.valid" (click)="addNewData(dogForm)">Create Data</button>
-                    <button class="btn btn-primary ms-3" type="submit" [disabled]="!dogForm.valid" (click)="updateExistingData(dogForm)">Update Data</button>
-                    <button class="btn btn-primary ms-3" type="submit" [disabled]="!dogForm.valid" (click)="deleteDataExistingData(dogForm)">Delete Data</button>
+                    <button class="btn btn-primary ms-3" type="submit" [disabled]="!dogForm.valid" (click)="addNewData()">Create Data</button>
+                    <button class="btn btn-primary ms-3" type="submit" [disabled]="!dogForm.valid" (click)="updateExistingData()">Update Data</button>
+                    <button class="btn btn-primary ms-3" type="submit" [disabled]="!dogForm.valid" (click)="deleteDataExistingData()">Delete Data</button>
                 </div>
             </form>
         </div>
